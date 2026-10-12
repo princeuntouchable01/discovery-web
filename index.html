@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Discovery Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>Game Hub</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#credits">Credits</a></li>
+        </ul>
+    </nav>
+
+    <h1>Our Featured Games</h1>
+    <div class="divider"></div>
+
+    <!-- SEARCH BAR -->
+    <div class="search-container">
+        <input type="text" id="gameSearch" placeholder="Search games by name, genre, or keyword...">
+        <span class="search-icon">🔍</span>
+    </div>
+
+    <div class="grid" id="gamesGrid">
+        <!-- FPS GAMES -->
+        <div class="card" data-name="Call of Duty" data-genre="fps">
+            <span class="genre-badge genre-fps">FPS</span>
+            <div class="img-wrap" onclick="openLightbox(this)">
+                <img src="https://kimi-web-img.moonshot.cn/img/sm.ign.com/a3e217fd20de8249f84cae4b73a0dd4eaa7e4c73.jpg" alt="Call of Duty">
+                <div class="play-overlay"><span>🔍</span></div>
+            </div>
+            <h3>Call of Duty</h3>
+            <p>A renowned first-person shooter featuring cinematic campaigns and intense multiplayer combat.</p>
+            <div class="btn-group">
+                <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter" target="_blank">DOWNLOAD</a>
+                <a class="btn-secondary" href="https://www.youtube.com/results?search_query=Call+of+Duty+Mobile+trailer" target="_blank">▶ Trailer</a>
+            </div>
+        </div>
+
+        <div class="card" data-name="Blood Strike" data-genre="fps">
+            <span class="genre-badge genre-fps">FPS</span>
+            <div class="img-wrap" onclick="openLightbox(this)">
+                <img src="https://kimi-web-img.moonshot.cn/img/shared.fastly.steamstatic.com/d153cd0b5addb6063764b2da3f3b6259db979ea6.jpg" alt="Blood Strike">
+                <div class="play-overlay"><span>🔍</span></div>
+            </div>
+            <h3>Blood Strike</h3>
+            <p>A tactical, fast-paced battle royale with customizable weapons and unique character abilities.</p>
+            <div class="btn-group">
+                <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.netease.newspike" target="_blank">DOWNLOAD</a>
+                <a class="btn-secondary" href="https://www.youtube.com/results?search_query=Blood+Strike+mobile+trailer" target="_blank">▶ Trailer</a>
+            </div>
+        </div>
+
+        <div class="card" data-name="PUBG Mobile" data-genre="fps">
+            <span class="genre-badge genre-fps">FPS</span>
+            <div class="img-wrap" onclick="openLightbox(this)">
+                <img src="https://kimi-web-img.moonshot.cn/img/static.invenglobal.com/741fb3b43dce2407d6e23bb61c050325483ed660.jpeg" alt="PUBG Mobile">
+                <div class="play-overlay"><span>🔍</span></div>
+            </div>
+            <h3>PUBG Mobile</h3>
+            <p>The original mobile battle royale with 100-player matches, realistic gunplay, and massive maps.</p>
+            <div class="btn-group">
+                <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.tencent.ig" target="_blank">DOWNLOAD</a>
+                <a class="btn-secondary" href="https://www.youtube.com/results?search_query=PUBG+Mobile+trailer" target="_blank">▶ Trailer</a>
+            </div>
+        </div>
+
+        <div class="card" data-name="Standoff 2" data-genre="fps">
+            <span class="genre-badge genre-fps">FPS</span>
+            <div class="img-wrap" onclick="openLightbox(this)">
+                <img src="https://placehold.co/400x250/1a2e1a/FFF?text=Standoff+2" alt="Standoff 2">
+                <div class="play-overlay"><span>🔍</span></div>
+            </div>
+            <h3>Standoff 2</h3>
+            <p>A competitive CS-style shooter with ranked matches, skins trading, and esports tournaments.</p>
+            <div class="btn-group">
+                <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.axlebolt.standoff2" target="_blank">DOWNLOAD</a>
+                <a class="btn-secondary" href="https://www.youtube.com/results?search_query=Standoff+2+trailer" target="_blank">▶ Trailer</a>
+            </div>
+        </div>
+
+        <!-- SPORTS GAMES -->
+        <div class="card" data-name="eFootball" data-genre="sports">
+            <span class="genre-badge genre-sports">Sports</span>
+            <div class="img-wrap" onclick="openLightbox(this)">
+                <img src="https://kimi-web-img.moonshot.cn/img/tse-mm.bing.com/432ad2af2d1c25de5523dcb456aafad77f87784e" alt="eFootball">
+                <div class="play-overlay"><span>🔍</span></div>
+            </div>
+            <h3>eFootball</h3>
+            <p>Konami's free-to-play football sim with Dream Team mode, real clubs, and cross-platform play.</p>
+            <div class="btn-group">
+                <a class="btn-primary" href="https://play.google.com/store/apps/details?id=jp.konami.pesam" target="_blank">DOWNLOAD</a>
+                <a class="btn-secondary" href="https://www.youtube.com/results?search_query=eFootball+mobile+trailer" target="_blank">▶ Trailer</a>
+            </div>
+        </div>
+
+        <div class="card" data-name="NBA 2K Mobile" data-genre="sports">
+            <span class="genre-badge genre-sports">Sports</span>
+            <div class="img-wrap" onclick="openLightbox(this)">
+                <img src="https://kimi-web-img.moonshot.cn/img/images.reviewed.app/7c8bd72d40cdaa9a0756b567c9493f825c0d8f34.webp" alt="NBA 2K Mobile">
+                <div class="play-overlay"><span>🔍</span></div>
+            </div>
+            <h3>NBA 2K Mobile</h3>
+            <p>Build your dream NBA team with 400+ players, online leagues, and seasonal card collections.</p>
+            <div class="btn-group">
+                <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.catdaddy.nba2km" target="_blank">DOWNLOAD</a>
+                <a class="btn-secondary" href="https://www.youtube.com/results?search_query=NBA+2K+Mobile+trailer" target="_blank">▶ Trailer</a>
+            </div>
+        </div>
+
+        <div class="card" data-name="Real Cricket 24" data-genre="sports">
+            <span class="genre-badge genre-sports">Sports</span>
+            <div class="img-wrap" onclick="openLightbox(this)">
+                <img src="https://kimi-web-img.moonshot.cn/img/img2.tapimg.net/5c5beb1495be31c511e48427ab4ff2ff107bc54a.jpg" alt="Real Cricket 24">
+                <div class="play-overlay"><span>🔍</span></div>
+            </div>
+            <h3>Real Cricket 24</h3>
+            <p>The most authentic cricket simulation with real stadiums, commentary, and multiplayer modes.</p>
+            <div class="btn-group">
+                <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.nautilus.realcricket" target="_blank">DOWNLOAD</a>
+                <a class="btn-secondary" href="https://www.youtube.com/results?search_query=Real+Cricket+24+trailer" target="_blank">▶ Trailer</a>
+            </div>
+        </div>
+
+        <!-- OTHER GAMES -->
+        <div class="card" data-name="Free Fire" data-genre="battle royale">
+            <span class="genre-badge genre-royale">Battle Royale</span>
+            <div class="img-wrap" onclick="openLightbox(this)">
+                <img src="https://kimi-web-img.moonshot.cn/img/cdn-www.bluestacks.com/f825774ef866495db1bfbe2d729623d5bb73212f.jpg" alt="Free Fire">
+                <div class="play-overlay"><span>🔍</span></div>
+            </div>
+            <h3>Free Fire</h3>
+            <p>A fast-paced battle royale game where 50 players fight to be the last one standing.</p>
+            <div class="btn-group">
+                <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.dts.freefireth" target="_blank">DOWNLOAD</a>
+                <a class="btn-secondary" href="https://www.youtube.com/results?search_query=Free+Fire+trailer" target="_blank">▶ Trailer</a>
+            </div>
+        </div>
+
+        <div class="card" data-name="Roblox" data-genre="platform">
+            <span class="genre-badge genre-platform">Platform</span>
+            <div class="img-wrap" onclick="openLightbox(this)">
+                <img src="https://kimi-web-img.moonshot.cn/img/www.f2p.com/70ed5532569c21933346bec995e61d393ad043ec.jpg" alt="Roblox">
+                <div class="play-overlay"><span>🔍</span></div>
+            </div>
+            <h3>Roblox</h3>
+            <p>A massive platform that lets users explore, create, and share endless unique gaming experiences.</p>
+            <div class="btn-group">
+                <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.roblox.client" target="_blank">DOWNLOAD</a>
+                <a class="btn-secondary" href="https://www.youtube.com/results?search_query=Roblox+trailer" target="_blank">▶ Trailer</a>
+            </div>
+        </div>
+
+        <div class="card" data-name="Minecraft" data-genre="sandbox">
+            <span class="genre-badge genre-sandbox">Sandbox</span>
+            <div class="img-wrap" onclick="openLightbox(this)">
+                <img src="https://kimi-web-img.moonshot.cn/img/cdn.mobygames.com/9089834e20dfebdfbd51742d5b298b35b4bbb534.jpg" alt="Minecraft">
+                <div class="play-overlay"><span>🔍</span></div>
+            </div>
+            <h3>Minecraft</h3>
+            <p>A creative sandbox game where you can build anything and survive in a vast, block-based world.</p>
+            <div class="btn-group">
+                <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.mojang.minecraftpe" target="_blank">DOWNLOAD</a>
+                <a class="btn-secondary" href="https://www.youtube.com/results?search_query=Minecraft+mobile+trailer" target="_blank">▶ Trailer</a>
+            </div>
+        </div>
+
+        <div class="card" data-name="Race Max Pro" data-genre="racing">
+            <span class="genre-badge genre-racing">Racing</span>
+            <div class="img-wrap" onclick="openLightbox(this)">
+                <img src="https://kimi-web-img.moonshot.cn/img/shared.akamai.steamstatic.com/40b7cc928fa3e8394bb30af5394e2da33c27f264.jpg" alt="Race Max Pro">
+                <div class="play-overlay"><span>🔍</span></div>
+            </div>
+            <h3>Race Max Pro</h3>
+            <p>An adrenaline-fueled racing game featuring intense street races, customizable cars, and challenging modes.</p>
+            <div class="btn-group">
+                <a class="btn-primary" href="https://play.google.com/store/apps/details?id=game.revani.racemaxpro" target="_blank">DOWNLOAD</a>
+                <a class="btn-secondary" href="https://www.youtube.com/results?search_query=Race+Max+Pro+trailer" target="_blank">▶ Trailer</a>
+            </div>
+        </div>
+
+        <!-- No results message -->
+        <div class="no-results" id="noResults">
+            😕 No games found matching your search. Try "FPS", "sports", "racing", or a game name.
+        </div>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img src="" alt="Full size" id="lightboxImg">
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+        <h2>About These Games</h2>
+        <p class="section-subtitle">Learn more about the titles featured on our hub</p>
+        <div class="divider"></div>
+
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Call of Duty: Mobile</h3>
+                <p>Developed by TiMi Studios and published by Activision (now part of Microsoft), Call of Duty: Mobile brings console-quality FPS action to your phone. It features multiple modes including classic Multiplayer, Battle Royale, Zombies, and DMZ: Recon. With seasonal updates, a World Championship esports scene, and deep weapon customization through Gunsmith, it remains one of the most polished shooters on mobile.</p>
+                <span class="tag">FPS / Battle Royale</span>
+            </div>
+
+            <div class="about-card">
+                <h3>Blood Strike</h3>
+                <p>Developed by NetEase, this fast-paced tactical FPS delivers smooth aiming, responsive controls, and optimized performance even on lower-end devices. It offers a fresh take on battle royale with unique Striker abilities, customizable weapon loadouts, faction-based modes, and aerial movement options like jetpacks.</p>
+                <span class="tag">Tactical FPS</span>
+            </div>
+
+            <div class="about-card">
+                <h3>PUBG Mobile</h3>
+                <p>Co-developed by LIGHTSPEED STUDIOS of Tencent Games and KRAFTON, Inc. Up to 100 players parachute onto massive maps like Erangel and Miramar, scavenging for weapons and gear. Features include Classic BR, Arena modes, Payload, Metro Royale, and monthly collaboration events.</p>
+                <span class="tag">Battle Royale / FPS</span>
+            </div>
+
+            <div class="about-card">
+                <h3>Standoff 2</h3>
+                <p>Developed by Axlebolt, founded in 2015 in Limassol, Cyprus, with a global team of almost 300. This competitive FPS draws heavy inspiration from Counter-Strike, offering bomb-defusal and team deathmatch modes. It features a robust ranked system, weapon skins marketplace, clan wars, and regular esports tournaments.</p>
+                <span class="tag">Competitive FPS</span>
+            </div>
+
+            <div class="about-card">
+                <h3>eFootball</h3>
+                <p>Developed and published by Konami, this free-to-play football simulation lets you build your Dream Team with real-world players and clubs. Features include Master League, online PvP divisions, co-op matches, and Smart Assist controls. With regular season updates, licensed kits, and cross-platform play between mobile and console.</p>
+                <span class="tag">Football / Simulation</span>
+            </div>
+
+            <div class="about-card">
+                <h3>NBA 2K Mobile</h3>
+                <p>Developed by Cat Daddy Games (a 2K-owned studio under Take-Two Interactive), NBA 2K Mobile brings authentic basketball action with over 400 NBA players past and present. Build your MyTEAM, compete in online leagues, participate in limited-time events, and collect themed cards with console-quality graphics.</p>
+                <span class="tag">Basketball / Card Collector</span>
+            </div>
+
+            <div class="about-card">
+                <h3>Real Cricket 24</h3>
+                <p>Developed by Nautilus Mobile, this is the most comprehensive cricket simulation on mobile, featuring real international stadiums, dynamic commentary, and authentic batting and bowling mechanics. Play Test matches, ODIs, T20s, and the World Cup across multiple difficulty levels with multiplayer support.</p>
+                <span class="tag">Cricket / Simulation</span>
+            </div>
+
+            <div class="about-card">
+                <h3>Garena Free Fire</h3>
+                <p>Developed by 111 Dots Studio and published by Garena. One of the world's most popular mobile battle royales, Free Fire drops up to 52 players onto an island for 10-minute matches. Beyond BR, it offers Clash Squad (4v4), Lone Wolf, and over 15 rotating event modes with 50+ unique characters and special abilities.</p>
+                <span class="tag">Battle Royale</span>
+            </div>
+
+            <div class="about-card">
+                <h3>Roblox</h3>
+                <p>Developed by Roblox Corporation, founded in 2004 by David Baszucki and Erik Cassel. Headquartered in San Mateo, California with a team exceeding 2,400 employees. Roblox isn't just a game—it's a global platform powering millions of user-created experiences. With cross-platform play, avatar customization, voice chat, and a thriving creator economy.</p>
+                <span class="tag">Platform / UGC</span>
+            </div>
+
+            <div class="about-card">
+                <h3>Minecraft</h3>
+                <p>Developed by Mojang Studios (a Microsoft subsidiary). Originally created by Markus "Notch" Persson. Current Studio Head: Kayleen Walters. Chief Creative Officer: Jens Bergensten. Game Director: Agnes Larsson. The legendary sandbox lets players mine, craft, build, and survive in procedurally generated block worlds with constant updates and infinite modding possibilities.</p>
+                <span class="tag">Sandbox / Survival</span>
+            </div>
+
+            <div class="about-card">
+                <h3>Race Max Pro</h3>
+                <p>Developed by Revani, built for racing enthusiasts. Race Max Pro offers three distinct disciplines: Street Racing, Drifting, and Drag Racing. Featuring 50+ officially licensed vehicles from brands like BMW, Nissan, Pagani, and Ford, with deep car customization and online ranked leagues.</p>
+                <span class="tag">Racing / Simulation</span>
+            </div>
+        </div>
+    </section>
+
+  <!-- CREDITS SECTION -->
+<section id="credits" class="credits-section">
+    <h2>Credits & Creators</h2>
+    <p class="section-subtitle">The talented teams behind these incredible games</p>
+    <div class="divider"></div>
+
+    <div class="credits-grid">
+        <!-- FPS -->
+        <div class="credit-card">
+            <span class="genre-tag genre-fps">FPS</span>
+            <h3>Call of Duty: Mobile</h3>
+            <div class="credit-row">
+                <span class="label">Developer</span>
+                <span class="value">TiMi Studios (Tencent Games)</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Publisher</span>
+                <span class="value">Activision (Microsoft)</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Key Team</span>
+                <span class="value">TiMi Studio Group<br><span class="team-list">Multiplayer, BR & Zombies teams</span></span>
+            </div>
+        </div>
+
+        <div class="credit-card">
+            <span class="genre-tag genre-fps">FPS</span>
+            <h3>Blood Strike</h3>
+            <div class="credit-row">
+                <span class="label">Developer</span>
+                <span class="value">NetEase Games</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Publisher</span>
+                <span class="value">NetEase, Inc.</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Key Team</span>
+                <span class="value">NetEase Shooting Division<br><span class="team-list">Striker abilities & combat design teams</span></span>
+            </div>
+        </div>
+
+        <div class="credit-card">
+            <span class="genre-tag genre-fps">FPS</span>
+            <h3>PUBG Mobile</h3>
+            <div class="credit-row">
+                <span class="label">Co-Developer</span>
+                <span class="value">LIGHTSPEED STUDIOS (Tencent)</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Co-Developer</span>
+                <span class="value">KRAFTON, Inc.</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Key Team</span>
+                <span class="value">600–1,500 engineers & live-ops<br><span class="team-list">Anti-cheat, server, art & QA teams</span></span>
+            </div>
+        </div>
+
+        <div class="credit-card">
+            <span class="genre-tag genre-fps">FPS</span>
+            <h3>Standoff 2</h3>
+            <div class="credit-row">
+                <span class="label">Developer</span>
+                <span class="value">Axlebolt</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Founded</span>
+                <span class="value">2015, Limassol, Cyprus</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Key Team</span>
+                <span class="value">~300 global team members<br><span class="team-list">Live-ops, esports & monetization teams</span></span>
+            </div>
+        </div>
+
+        <!-- SPORTS -->
+        <div class="credit-card">
+            <span class="genre-tag genre-sports">Sports</span>
+            <h3>eFootball</h3>
+            <div class="credit-row">
+                <span class="label">Developer</span>
+                <span class="value">Konami Digital Entertainment</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Publisher</span>
+                <span class="value">Konami Holdings Corp.</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Key Team</span>
+                <span class="value">PES Production Team<br><span class="team-list">Fox Engine & gameplay engineers</span></span>
+            </div>
+        </div>
+
+        <div class="credit-card">
+            <span class="genre-tag genre-sports">Sports</span>
+            <h3>NBA 2K Mobile</h3>
+            <div class="credit-row">
+                <span class="label">Developer</span>
+                <span class="value">Cat Daddy Games</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Publisher</span>
+                <span class="value">2K (Take-Two Interactive)</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Key Team</span>
+                <span class="value">Live-ops, Card Design & Engineering<br><span class="team-list">Kayde Ahern, Bob Givnin, Jeff Kalles</span></span>
+            </div>
+        </div>
+
+        <div class="credit-card">
+            <span class="genre-tag genre-sports">Sports</span>
+            <h3>Real Cricket 24</h3>
+            <div class="credit-row">
+                <span class="label">Developer</span>
+                <span class="value">Nautilus Mobile</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Publisher</span>
+                <span class="value">Nautilus Mobile Apps Pvt. Ltd.</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Key Team</span>
+                <span class="value">RC Engineering & Art Team<br><span class="team-list">Stadium recreation & physics engineers</span></span>
+            </div>
+        </div>
+
+        <!-- OTHERS -->
+        <div class="credit-card">
+            <span class="genre-tag genre-royale">Battle Royale</span>
+            <h3>Garena Free Fire</h3>
+            <div class="credit-row">
+                <span class="label">Developer</span>
+                <span class="value">111 Dots Studio</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Publisher</span>
+                <span class="value">Garena (Sea Ltd)</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Key Team</span>
+                <span class="value">Character Design & Live Events<br><span class="team-list">50+ character ability designers</span></span>
+            </div>
+        </div>
+
+        <div class="credit-card">
+            <span class="genre-tag genre-platform">Platform</span>
+            <h3>Roblox</h3>
+            <div class="credit-row">
+                <span class="label">Developer</span>
+                <span class="value">Roblox Corporation</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Founders</span>
+                <span class="value">David Baszucki & Erik Cassel (2004)</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Key Team</span>
+                <span class="value">2,400+ employees worldwide<br><span class="team-list">CEO David Baszucki, CMO Jerret West, CPO Manuel Bronstein</span></span>
+            </div>
+        </div>
+
+        <div class="credit-card">
+            <span class="genre-tag genre-sandbox">Sandbox</span>
+            <h3>Minecraft</h3>
+            <div class="credit-row">
+                <span class="label">Developer</span>
+                <span class="value">Mojang Studios (Microsoft)</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Original Creator</span>
+                <span class="value">Markus "Notch" Persson</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Key Team</span>
+                <span class="value">Studio Head Kayleen Walters<br><span class="team-list">CCO Jens Bergensten, Game Director Agnes Larsson, Art Director Markus Toivonen</span></span>
+            </div>
+        </div>
+
+        <div class="credit-card">
+            <span class="genre-tag genre-racing">Racing</span>
+            <h3>Race Max Pro</h3>
+            <div class="credit-row">
+                <span class="label">Developer</span>
+                <span class="value">Revani</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Publisher</span>
+                <span class="value">Revani Interactive</span>
+            </div>
+            <div class="credit-row">
+                <span class="label">Key Team</span>
+                <span class="value">Vehicle Physics & Track Design<br><span class="team-lifst">Licensed car partnership team</span></span>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <p> Game Discovery Hub. All game names, logos, and trademarks belong to their respective owners.</p>
+    <p>Built by <strong>Prince</strong> in collab with <strong>kimi</strong> · TECH PRO © 2026 · Aspiring. Building. Growing.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
